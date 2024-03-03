@@ -3,11 +3,12 @@ Building a Expense Tracker
     - Learnt using lambda functions in Python
         - Lambda Functions are brief, anonymous functions in Python
             - Ideal for simple and one-time tasks
+            - Can stored in a variable and used as a regular function
         - Syntax: lambda x: expr, where 'x' -> parameter and 'expr' -> expression
         - Example: lambda x: x ** 2 -> returns the square of the input
 '''
 def add_expense(expenses, amount, category):
-    # Append a dictionary to the list of expenses
+    # Append a dictionary to the list of expenses    
     expenses.append({'amount': amount, 'category': category})
 
 def print_expenses(expenses):
