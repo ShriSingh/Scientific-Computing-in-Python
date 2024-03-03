@@ -25,7 +25,8 @@ def verify_card_number(card_number):
     return sum_check == 0
 
 def main():
-    card_number = input("Enter your card number('XXXX-XXXX-XXXX-XXXX'): ") # 1234-5678-9012-3456
+    # Try numbers: 4111-1111-4555-1142, 4111-1111-1111-1111, 1234-5678-9012-3456
+    card_number = input("Enter your card number('XXXX-XXXX-XXXX-XXXX'): ")
     card_translation = str.maketrans({'-': '', ' ': ''})
     translated_card_number = card_number.translate(card_translation)
 
