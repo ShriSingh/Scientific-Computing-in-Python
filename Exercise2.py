@@ -1,5 +1,9 @@
 '''
 Implementing a Luhn Algorithm
+    - Go thru the number from right to left and double every second digit
+        - If product is greater than 9, then add the digits together
+        (E.g. In 7 9 9 2, 9 * 2 = 18 --> 18 > 9 --> 1 + 8 = 9)
+    - If the sum of all the digits is a multiple of 10, then the number is valid
 '''
 def verify_card_number(card_number):
     sum_of_odd_digits = 0
