@@ -1,8 +1,13 @@
-'''
-Writing a Caesar Cipher
-- Shifts each letter with the same given offset
-'''
+# Learning String manipulation by Building a Cipher
+
 def caesar(message, offset):
+    '''
+    Writing a Caesar Cipher
+    - Shifts each letter with the same given offset
+    : param message: The message to be encrypted
+    : param offset: The number of positions to shift each letter
+    : return: plain text & encrypted message
+    '''
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
@@ -15,11 +20,16 @@ def caesar(message, offset):
             encrypted_text += alphabet[new_index]
     return 'plain text:', message + '\nencrypted text:', encrypted_text
 
-'''
-Writing a Vigenere Cipher
-- Uses a keyword to shift each letter
-'''
+
 def vigenere(message, key, direction=1):
+    '''
+    Writing a Vigenere Cipher
+    - Uses a keyword to shift each letter
+    : param message: The message to be encrypted
+    : param key: The keyword to be used for encryption
+    : param direction: The direction of the shift (1 for encryption, -1 for decryption)
+    : return: The encrypted/decrypted message
+    '''
     key_index = 0
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     final_message = ''
@@ -40,10 +50,10 @@ def vigenere(message, key, direction=1):
             final_message += alphabet[new_index]
     return final_message
 
-# Encrypting function
 def encrypt(message, key):
+    """Encrypting function"""
     return vigenere(message, key)
 
-# Decrypting function
 def decrypt(message, key):
+    """Decrypting function"""
     return vigenere(message, key, -1)

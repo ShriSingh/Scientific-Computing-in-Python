@@ -1,3 +1,5 @@
+# Learning Lambda Functions through an Expense Tracker
+
 '''
 Building a Expense Tracker
     - Learnt using lambda functions in Python
@@ -8,24 +10,35 @@ Building a Expense Tracker
         - Example: lambda x: x ** 2 -> returns the square of the input
 '''
 def add_expense(expenses, amount, category):
-    # Append a dictionary to the list of expenses    
+    """
+    Append a dictionary to the list of expenses
+    """
     expenses.append({'amount': amount, 'category': category})
 
 def print_expenses(expenses):
+    """
+    Printing all the expenses in the list
+    """
     for expense in expenses:
         print(f'Amount: ${expense["amount"]}, Category: {expense["category"]}')
 
 def total_expenses(expenses):
-    # Using a lambda function add up all the amounts in the list of expenses
+    """
+    Using a lambda function add up all the amounts in the list of expenses
+    """
     return sum(map(lambda expense: expense['amount'], expenses))
 
 def filter_expenses_by_category(expenses, category):
-    # Using a lambda function to identify and filter the expenses by category
+    """
+    Using a lambda function to identify and filter the expenses by category
+    """
     return filter(lambda expense: expense['category'] == category, expenses)
 
 def main():
+    """
+    Menu driven program to run the expense tracker
+    """
     expenses = []
-    
     while True:
         print('\nExpense Tracker')
         print('1. Add Expense')
