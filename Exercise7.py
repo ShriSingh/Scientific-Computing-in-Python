@@ -1,8 +1,4 @@
 # Learning Recursion by Solving the Towe of Hanoi Puzzle
-NUMBER_OF_DISKS = 5
-A = list(range(NUMBER_OF_DISKS, 0, -1))
-B = []
-C = []
 
 def move(n, source, auxiliary, target):
     """
@@ -25,6 +21,11 @@ def move(n, source, auxiliary, target):
     # move the n - 1 disks that we left on auxiliary onto target
     move(n - 1,  auxiliary, source, target)
 
-
-# initiate call from source A to target C with auxiliary B
-print(move(NUMBER_OF_DISKS, A, B, C))
+if __name__ == '__main__':
+    NUMBER_OF_DISKS = 5
+    A = list(range(NUMBER_OF_DISKS, 0, -1))
+    B = []
+    C = []
+    
+    # initiate call from source A to target C with auxiliary B
+    print(move(NUMBER_OF_DISKS, A, B, C))
