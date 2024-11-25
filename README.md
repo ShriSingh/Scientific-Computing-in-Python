@@ -10,5 +10,5 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - Exercise9.py: Learning Classes and Objects by Building a Sudoku Solver
 
 Here's a list of projects in this FreeCodeCamp's certification:
-- Arthimetic_Formatter.py: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them.
-- Time_Calculator.py: Adds a start time and a duration time and returns the result.
+- Arthimetic Formatter: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them.
+- Time Calculator: Adds a start time and a duration time and returns the result.
