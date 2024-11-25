@@ -7,6 +7,7 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - Exercise5.py: Learning Regular Expressions by Building a Password Generator
 - Exercise6.py: Learning algorithm design by building a shortest path algorithm
 - Exercise7.py: Learning Recursion by Solving the Towe of Hanoi Puzzle
+- Exercise8.py: Learning Data Structures by Building the Merge Sort Algorithm
 - Exercise9.py: Learning Classes and Objects by Building a Sudoku Solver
 
 Here's a list of projects in this FreeCodeCamp's certification:
