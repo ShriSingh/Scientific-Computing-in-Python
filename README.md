@@ -9,6 +9,7 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - Exercise7.py: Learning Recursion by Solving the Towe of Hanoi Puzzle
 - Exercise8.py: Learning Data Structures by Building the Merge Sort Algorithm
 - Exercise9.py: Learning Classes and Objects by Building a Sudoku Solver
+- Exercise10.py: Learning Tree Reversal by Building a Binary Search Tree
 
 Here's a list of projects in this FreeCodeCamp's certification:
 - Arthimetic Formatter: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them.
