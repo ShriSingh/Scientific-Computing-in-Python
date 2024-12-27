@@ -12,5 +12,6 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - Exercise10.py: Learning Tree Reversal by Building a Binary Search Tree
 
 Here's a list of projects in this FreeCodeCamp's certification:
-- Arthimetic Formatter: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them.
-- Time Calculator: Adds a start time and a duration time and returns the result.
+- **Arthimetic Formatter:** Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
+- **Time Calculator:** Adds a start time and a duration time and returns the result
+- **Budget App:** Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories.
