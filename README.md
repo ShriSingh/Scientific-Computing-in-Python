@@ -11,6 +11,7 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - Exercise9.py: Learning Classes and Objects by Building a Sudoku Solver
 - Exercise10.py: Learning Tree Reversal by Building a Binary Search Tree
 - Exercise11.py: Learning Special Methods by Building a Vector Space
+- Exercise12.py: Learning Interfaces by Building an Equation Solver
 
 Here's a list of projects in this FreeCodeCamp's certification:
 - **Arthimetic Formatter:** Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
