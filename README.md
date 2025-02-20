@@ -14,6 +14,6 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - [Exercise 12](Exercise12.py): Learning Interfaces by Building an Equation Solver
 
 Here's a list of projects in this FreeCodeCamp's certification:
-- [**Arthimetic Formatter**](Arthimetic_Formatter.py): Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
+- [**Arithmetic Formatter**](Arithmetic_Formatter.py): Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
 - [**Time Calculator**](Time_Calculator.py): Adds a start time and a duration time and returns the result
 - [**Budget App**](Budget_App.py): Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories.
