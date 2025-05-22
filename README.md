@@ -12,6 +12,7 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - [Exercise 10](Exercise10.py): Learning Tree Reversal by Building a Binary Search Tree
 - [Exercise 11](Exercise11.py): Learning Special Methods by Building a Vector Space
 - [Exercise 12](Exercise12.py): Learning Interfaces by Building an Equation Solver
+- [Exercise 13](Exercise13.py): Learning Encapsulation by Building a Projectile Trajectory Calculator
 
 Here's a list of projects in this FreeCodeCamp's certification:
 - [**Arithmetic Formatter**](Projects\Arithmetic Formatter\Arithmetic_Formatter.py): Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
