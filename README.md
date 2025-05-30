@@ -14,7 +14,7 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 - [Exercise 12](Exercise12.py): Learning Interfaces by Building an Equation Solver
 - [Exercise 13](Exercise13.py): Learning Encapsulation by Building a Projectile Trajectory Calculator
 
-Here's a list of projects in this FreeCodeCamp's certification:
-- [**Arithmetic Formatter**](Projects\Arithmetic Formatter\Arithmetic_Formatter.py): Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
-- [**Time Calculator**](Projects\Time Calculator\Time_Calculator.py): Adds a start time and a duration time and returns the result
-- [**Budget App**](Projects\Budget App\Budget_App.py): Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories.
+Here's a list of projects in this FreeCodeCamp's certification(all of them are in the 'Projects' folder):
+- **Arithmetic Formatter**: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
+- **Time Calculator**: Adds a start time and a duration time and returns the result
+- **Budget App**: Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories.
