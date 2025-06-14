@@ -1,3 +1,5 @@
+'''Building a Time Calculator'''
+
 def add_time(start: str, duration: str, day=None):
     """
     Adds a start time and a duration time and returns the result.
