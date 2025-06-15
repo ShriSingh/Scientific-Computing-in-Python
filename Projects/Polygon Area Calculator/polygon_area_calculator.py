@@ -90,7 +90,7 @@ class Rectangle:
         perimeter = (2 * self.width) + (2 * self.height)
 
         return perimeter
-    
+
     def get_diagonal(self):
         """
         Calculates the length of the diagonal of the rectangle
@@ -106,3 +106,64 @@ class Rectangle:
         diagonal_length = (((self.width ** 2) + (self.height ** 2)) ** 0.5)
 
         return diagonal_length
+
+class Square(Rectangle):
+    """
+    Creating a Square class, which is a subclass of the Rectangle class.
+    Can access the Rectangle class methods.
+
+    Contains:
+        set_side 
+    """
+
+    def __init__(self, side):
+        """
+        Creating a Square class with a constructor 
+        that takes 'side' value and assigns it to Rectangle's 
+        width and height attributes
+
+        Parameters:
+            self (object):
+                The square object
+            side (float): 
+                The length of the side of the square
+        """
+        super().__init__(side, side)
+
+    def set_side(self, side):
+        """
+        Setting the sides of the square
+
+        Parameters:
+            self (object):
+                The square object
+            side (float):
+                The length of the side of the square
+        """
+        Rectangle.width = side
+        Rectangle.height = side
+
+    def set_width(self, side):
+        """
+        Setting the width of the square
+
+        Parameters:
+            self (object):
+                The square object
+            side (float):
+                The length of the side of the square
+        """
+        Rectangle.width = side
+
+    def set_height(self, side):
+        """
+        Setting the height of the square
+
+        Parameters:
+            self (object):
+                The square object
+
+            side (float):
+                The length of the side of the square
+        """
+        Rectangle.height = side
