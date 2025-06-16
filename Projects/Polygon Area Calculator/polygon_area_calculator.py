@@ -107,6 +107,33 @@ class Rectangle:
 
         return diagonal_length
     
+    def get_picture(self):
+        """
+        Creating visual of the object using '*'
+
+        Parameters:
+            self (object):
+                The rectangle object
+        
+        Returns:
+            diagram (string):
+                Outputs a figure of the object using '*'
+        """
+        # Checking if the shape's dimensions are too big
+        if self.width > 50 or self.height > 50:
+            return "Too big for picture."
+        else: # Drawing up the diagram
+            diagram = ""
+            # Adding '*' width-wise based on height of the shape
+            for _ in range(0, self.height):
+                diagram += ("*" * self.width) + "\n"
+
+            return diagram
+        
+    def get_amount_inside(self, shape):
+        pass
+
+
     def __str__(self):
         """
         Providing a string representation of the rectangle
@@ -180,10 +207,16 @@ class Square(Rectangle):
 
 
 if __name__ == "__main__":
-    rect = Rectangle(10, 5)
+    rect = Rectangle(19, 4)
     print(rect)
-    print(rect.get_area())
+    print("Area:", rect.get_area())
+    print("Perimeter:", rect.get_perimeter())
+    print("Diagonal:", rect.get_diagonal())
+    print("Diagram:\n" + rect.get_picture())
 
-    square = Square(5)
+    square = Square(8)
     print(square)
-    print(square.get_area())
+    print("Area:", square.get_area())
+    print("Perimeter:", square.get_perimeter())
+    print("Diagonal:", square.get_diagonal())
+    print("Diagram:\n" + square.get_picture())
