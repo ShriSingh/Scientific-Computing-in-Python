@@ -103,7 +103,7 @@ class Rectangle:
             diagonal_length (float):
                 The length of the diagonal of the rectangle
         """
-        diagonal_length = (((self.width ** 2) + (self.height ** 2)) ** 0.5)
+        diagonal_length = round((((self.width ** 2) + (self.height ** 2)) ** 0.5), 3)
 
         return diagonal_length
     
@@ -131,8 +131,24 @@ class Rectangle:
             return diagram
         
     def get_amount_inside(self, shape):
-        pass
+        """
+        Calculating the number of times a shape(entered by the user)
+        can fit inside the object with no rotations
 
+        Parameters:
+            self (object):
+                The instance of the object
+            shape (object):
+                The instance of the object to be fitted in the main object
+        """
+        instance = 0
+        # Comparing the dimensions of object to be fitted in the main object
+        if (shape.width < self.height) and (shape.height < self.height):
+            # calculating the instances 
+            instance = (self.height // self.height) * (self.width // shape.width)
+            return instance
+        # Returning instance as 0, the shape being fitted is bigger than the main object
+        return instance
 
     def __str__(self):
         """
@@ -214,7 +230,7 @@ if __name__ == "__main__":
     print("Diagonal:", rect.get_diagonal())
     print("Diagram:\n" + rect.get_picture())
 
-    square = Square(8)
+    square = Square(7)
     print(square)
     print("Area:", square.get_area())
     print("Perimeter:", square.get_perimeter())
