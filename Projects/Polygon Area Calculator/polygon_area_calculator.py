@@ -106,6 +106,23 @@ class Rectangle:
         diagonal_length = (((self.width ** 2) + (self.height ** 2)) ** 0.5)
 
         return diagonal_length
+    
+    def __str__(self):
+        """
+        Providing a string representation of the rectangle
+        
+        Parameters:
+            self (object):
+                The rectangle object
+
+            rectangle_object (string):
+                String representation of the Rectangle
+        """
+
+        rectangle_object = f"Rectangle(width={self.width}, height={self.height})"
+
+        return rectangle_object
+
 
 class Square(Rectangle):
     """
@@ -132,7 +149,8 @@ class Square(Rectangle):
 
     def set_side(self, side):
         """
-        Setting the sides of the square
+        Setting the sides of the square by overriding
+        Rectangle's 'width' and 'height' by Square's 'side'
 
         Parameters:
             self (object):
@@ -140,30 +158,32 @@ class Square(Rectangle):
             side (float):
                 The length of the side of the square
         """
-        Rectangle.width = side
-        Rectangle.height = side
+        self.width = side
+        self.height = side
 
-    def set_width(self, side):
+    def __str__(self):
         """
-        Setting the width of the square
-
-        Parameters:
-            self (object):
-                The square object
-            side (float):
-                The length of the side of the square
-        """
-        Rectangle.width = side
-
-    def set_height(self, side):
-        """
-        Setting the height of the square
+        Adding a string representation to the square object
 
         Parameters:
             self (object):
                 The square object
 
-            side (float):
-                The length of the side of the square
+        Returns:
+            square_object (string):
+                String representation of Square
         """
-        Rectangle.height = side
+
+        square_object = f"Square(side={self.width})"
+
+        return square_object
+
+
+if __name__ == "__main__":
+    rect = Rectangle(10, 5)
+    print(rect)
+    print(rect.get_area())
+
+    square = Square(5)
+    print(square)
+    print(square.get_area())
