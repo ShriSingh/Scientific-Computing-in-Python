@@ -1,4 +1,4 @@
-# Building a Polygon Area Calculator
+'''Building a Polygon Area Calculator'''
 
 class Rectangle:
     """
@@ -25,10 +25,10 @@ class Rectangle:
 
         Parameters:
             self (object):
-                The rectangle object
-            width (float): 
+                The instance of the Rectangle class
+            width (int): 
                 The width of the rectangle
-            height (float): 
+            height (int): 
                 The height of the rectangle
         
         """
@@ -41,8 +41,8 @@ class Rectangle:
 
         Parameters:
             self (object):
-                The rectangle object
-            width (float): 
+                The instance of the Rectangle class
+            width (int): 
                 The new width of the rectangle
         """
         self.width = width
@@ -53,8 +53,8 @@ class Rectangle:
 
         Parameters:
             self (object): 
-                The rectangle object
-            height (float): 
+                The instance of the Rectangle class
+            height (int): 
                 The new height of the rectangle
         """
         self.height = height
@@ -65,10 +65,10 @@ class Rectangle:
 
         Parameters:
             self (object):
-                The rectangle object
+                The instance of the Rectangle class
 
         Returns:
-            area (float):
+            area (int):
                 The area of the rectangle
         """
         area = self.width * self.height
@@ -81,7 +81,7 @@ class Rectangle:
 
         Paramters:
             self (object):
-                The rectangle object
+                The instance of the Rectangle class
 
         Returns:
             perimeter (float):
@@ -91,33 +91,34 @@ class Rectangle:
 
         return perimeter
 
-    def get_diagonal(self):
+    def get_diagonal(self) -> float:
         """
         Calculates the length of the diagonal of the rectangle
 
         Parameters:
             self (object):
-                The rectangle object
+                The instance of the Rectangle class
 
         Returns:
             diagonal_length (float):
                 The length of the diagonal of the rectangle
         """
+        # Calculating the length of using pythgorean theorem(round it up by 3 decimal places)
         diagonal_length = round((((self.width ** 2) + (self.height ** 2)) ** 0.5), 3)
 
         return diagonal_length
-    
+
     def get_picture(self):
         """
         Creating visual of the object using '*'
 
         Parameters:
             self (object):
-                The rectangle object
+                The instance of the Rectangle class
         
         Returns:
             diagram (string):
-                Outputs a figure of the object using '*'
+                Outputs a figure of the Rectangle class using '*'
         """
         # Checking if the shape's dimensions are too big
         if self.width > 50 or self.height > 50:
@@ -129,7 +130,7 @@ class Rectangle:
                 diagram += ("*" * self.width) + "\n"
 
             return diagram
-        
+
     def get_amount_inside(self, shape):
         """
         Calculating the number of times a shape(entered by the user)
@@ -137,9 +138,9 @@ class Rectangle:
 
         Parameters:
             self (object):
-                The instance of the object
+                The instance of the Rectangle class
             shape (object):
-                The instance of the object to be fitted in the main object
+                The instance of the object to be fitted in the Rectangle class
         """
         instance = 0
         # Comparing the dimensions of object to be fitted in the main object
@@ -156,10 +157,10 @@ class Rectangle:
         
         Parameters:
             self (object):
-                The rectangle object
+                The instance of the Rectangle class
 
             rectangle_object (string):
-                String representation of the Rectangle
+                String representation of the Rectangle class
         """
 
         rectangle_object = f"Rectangle(width={self.width}, height={self.height})"
@@ -184,7 +185,7 @@ class Square(Rectangle):
 
         Parameters:
             self (object):
-                The square object
+                The instance of the Square class
             side (float): 
                 The length of the side of the square
         """
@@ -197,7 +198,7 @@ class Square(Rectangle):
 
         Parameters:
             self (object):
-                The square object
+                The instance of the Square class
             side (float):
                 The length of the side of the square
         """
@@ -210,11 +211,11 @@ class Square(Rectangle):
 
         Parameters:
             self (object):
-                The square object
+                The instance of the Square class
 
         Returns:
             square_object (string):
-                String representation of Square
+                String representation of an instance of the Square class
         """
 
         square_object = f"Square(side={self.width})"
@@ -223,16 +224,18 @@ class Square(Rectangle):
 
 
 if __name__ == "__main__":
-    rect = Rectangle(19, 4)
+    rect = Rectangle(10, 5)
     print(rect)
     print("Area:", rect.get_area())
     print("Perimeter:", rect.get_perimeter())
     print("Diagonal:", rect.get_diagonal())
     print("Diagram:\n" + rect.get_picture())
 
-    square = Square(7)
+    square = Square(3)
     print(square)
     print("Area:", square.get_area())
     print("Perimeter:", square.get_perimeter())
     print("Diagonal:", square.get_diagonal())
     print("Diagram:\n" + square.get_picture())
+
+    print(f"Number of times {square} can fit in {rect}:", rect.get_amount_inside(square))
