@@ -12,7 +12,27 @@ class Hat:
     Takes a variable number of arguments that specify the number
     of balls of each color that are in that hat
     """
-    pass
+    def __init__(self, **kwargs):
+        """
+        Creating a Hat class with a constructor
+        that specifies various ball colors and the number
+        of balls of each color
+
+        Parameters:
+            self (object):
+                The instance of the Hat object
+            **kwargs:
+                Multiple ball colors of various quantities
+        """
+        # A list to store the collection of balls in the "hat"
+        self.collection = []
+        # Going thru every ball of every color
+        for color, amount in kwargs.items():
+            # Setting the attributes(color and quantity) of ball
+            setattr(self, color, amount)
+            # Adding all the balls to the list
+            for _ in range(0, amount):
+                self.collection.append(color)
 
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
