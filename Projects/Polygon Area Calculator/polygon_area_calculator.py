@@ -145,8 +145,8 @@ class Rectangle:
         instance = 0
         # Comparing the dimensions of object to be fitted in the main object
         if (shape.width < self.height) and (shape.height < self.height):
-            # calculating the instances 
-            instance = (self.height // self.height) * (self.width // shape.width)
+            # calculating the instances
+            instance = (self.get_area()) // (shape.get_area())
             return instance
         # Returning instance as 0, the shape being fitted is bigger than the main object
         return instance
@@ -205,6 +205,30 @@ class Square(Rectangle):
         self.width = side
         self.height = side
 
+    def set_width(self, width):
+        """
+        Setting the width of the square
+
+        Parameters:
+            self (object):
+                The instance of the Square
+            width (int):
+                The width of the square
+        """
+        self.set_side(width)
+
+    def set_height(self, height):
+        """
+        Setting the height of the square
+
+        Parameters:
+            self (object):
+                The instance of the square
+            height (int):
+                The height of the square
+        """
+        self.set_side(height)
+
     def __str__(self):
         """
         Adding a string representation to the square object
@@ -224,14 +248,14 @@ class Square(Rectangle):
 
 
 if __name__ == "__main__":
-    rect = Rectangle(10, 5)
+    rect = Rectangle(15, 10)
     print(rect)
     print("Area:", rect.get_area())
     print("Perimeter:", rect.get_perimeter())
     print("Diagonal:", rect.get_diagonal())
     print("Diagram:\n" + rect.get_picture())
 
-    square = Square(3)
+    square = Square(5)
     print(square)
     print("Area:", square.get_area())
     print("Perimeter:", square.get_perimeter())
