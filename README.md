@@ -17,4 +17,6 @@ Here's a list of exercises in this FreeCodeCamp's certification:
 Here's a list of projects in this FreeCodeCamp's certification(all of them are in the 'Projects' folder):
 - **Arithmetic Formatter**: Takes in a string containing addition & substraction problems, breaks them into separate problems, stacks them vertically, and solves them
 - **Time Calculator**: Adds a start time and a duration time and returns the result
-- **Budget App**: Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories.
+- **Budget App**: Tracks money deposited, withdrawn, and used for different budget catgories, along with a bar chart displaying percentage of all the money allocated to the budget categories
+- **Polygon Area Calculator**: Takes in a dimension of rectangle and square, returns area, perimeter, diagonal, and how many times can one fit into the other without rotations
+- **Probability Calculator**: Calculates the probability of drawing a certain number of colored balls from a hat
