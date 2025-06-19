@@ -52,15 +52,19 @@ class Hat:
         draw_list = []
         # Storing the balls list in the hat
         contents = self.contents
-        # Comparing the number of balls drawn from the hat to the number of balls in the hat
-        if balls_drawn > len(contents):
+        # Comparing the number of balls drawn from the hat to 
+        # the number of balls in the hat
+        if balls_drawn > len(contents): # Balls drawn being greater than available in the hat
             return contents
-        else:
+        else: # Balls drawn being less than available in the hat
+            # Looping until balls drawn from the hat is greater than the draw list
             while len(draw_list) < balls_drawn:
+                # Randomizing index from 0 to the length of the balls list
                 index = random.randint(0, len(contents) - 1)
                 ball = contents[index]
                 contents.remove(ball)
-                draw_list.append(contents)
+                draw_list.append(ball)
+
         return draw_list
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
@@ -83,8 +87,34 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
             Probability values for a certain expected balls drawn
             from a hat
     """
-    pass
+    # Keeping track of the times we get the expected balls drawn
+    expected_balls_count = 0
+    # Iterating through each experiment
+    for _ in range(num_experiments):
+        # Duplicating hat object
+        ext_hat = copy.deepcopy(hat)
+        # Calling draw() to extract the number of balls asked
+        ball_draw = ext_hat.draw(num_balls_drawn)
+        # Keeping the ball color count
+        ball_count_color = 0
+        # Iterating through each ball from the expected ball group
+        for i in expected_balls.keys():
+            # Comparing ball drawn's color to expected ball's color
+            if ball_draw.count(i) >= expected_balls[i]:
+                ball_count_color += 1
+        # Checking ball's drawn count is equal to the number of expected balls
+        if ball_count_color == len(expected_balls):
+            expected_balls_count += 1
+
+    # Calculating probability
+    probability = expected_balls_count / num_experiments
+
+    return probability
 
 if __name__ == "__main__":
-    hat = Hat(red=1, blue=3, green=2)
-    print(hat)
+    hat = Hat(black=6, red=4, green=3)
+    solution = experiment(hat=hat,
+                          expected_balls={'red':2,'green':1},
+                          num_balls_drawn=5,
+                          num_experiments=2000)
+    print(solution)
