@@ -55,14 +55,19 @@ class Hat:
         # Comparing the number of balls drawn from the hat to 
         # the number of balls in the hat
         if balls_drawn > len(contents): # Balls drawn being greater than available in the hat
-            return contents
+            # Copying out the hat list in the draw list
+            draw_list = contents.copy()
+            # Removing all the balls from the hat
+            contents.clear()
+            return draw_list
         else: # Balls drawn being less than available in the hat
             # Looping until balls drawn from the hat is greater than the draw list
             while len(draw_list) < balls_drawn:
                 # Randomizing index from 0 to the length of the balls list
                 index = random.randint(0, len(contents) - 1)
-                # 
+                # Picking out the ball based on the index from the hat
                 ball = contents[index]
+                # Removing the ball from the hat and putting it in the draw list
                 contents.remove(ball)
                 draw_list.append(ball)
 
