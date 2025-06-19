@@ -61,6 +61,7 @@ class Hat:
             while len(draw_list) < balls_drawn:
                 # Randomizing index from 0 to the length of the balls list
                 index = random.randint(0, len(contents) - 1)
+                # 
                 ball = contents[index]
                 contents.remove(ball)
                 draw_list.append(ball)
@@ -112,9 +113,9 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     return probability
 
 if __name__ == "__main__":
-    hat = Hat(black=6, red=4, green=3)
+    hat = Hat(black=5, red=7, green=6)
     solution = experiment(hat=hat,
-                          expected_balls={'red':2,'green':1},
-                          num_balls_drawn=5,
+                          expected_balls={'red':3,'green':4},
+                          num_balls_drawn=7,
                           num_experiments=2000)
     print(solution)
